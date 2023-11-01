@@ -1,0 +1,111 @@
+<ngx-spinner
+  bdColor="rgba(51,51,51,0.8)"
+  size="medium"
+  color="#fff"
+  type="ball-scale-multiple"
+>
+  <p style="font-size: 20px; color: white">Loading...</p>
+</ngx-spinner>
+
+<div class="h-screen" style="background-color: #212121">
+  <div class="header">
+    <header class="text-gray-600 body-font">
+      <div class="container mx-auto flex flex-wrap p-5 flex-col md:flex-row items-center" style="width: 95%!important; flex-direction: row!important;">
+        <a class="flex title-font font-medium items-center text-gray-900 mb-4 md:mb-0">
+          <img src="../../assets/Images/icon.jpg" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="w-10 h-10 text-white p-2 bg-indigo-500 rounded-full" viewBox="0 0 24 24">
+            <!-- <path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5"></path>
+        > -->
+          <span class="ml-3 text-xl" style="color: white;">Weather App</span>
+        </a>
+        <nav class="md:mr-auto md:ml-4 md:py-1 md:pl-4 md:border-l md:border-gray-400	flex flex-wrap items-center text-base justify-center">
+          <a class="mr-5 hover:text-red-400" href="https://www.linkedin.com/in/swapnil-singh315/" target="_blank">LinkedIn</a>
+        </nav>
+        <a href="https://github.com/swapnilis" target="_blank">
+          <button class="inline-flex items-center bg-blue-700 border-0 py-1 px-3 focus:outline-none hover:bg-red-400 rounded text-base mt-4 md:mt-0">
+            Github
+            <svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="w-4 h-4 ml-1" viewBox="0 0 24 24">
+              <path d="M5 12h14M12 5l7 7-7 7"></path>
+            </svg>
+          </button>
+        </a>
+      </div>
+    </header>
+  </div>
+  <div class="total_div">
+    <div class="search_div">
+      <div class="container">
+        <input
+          [(ngModel)]="userInput"
+          required=""
+          type="text"
+          name="text"
+          class="input"
+        />
+        <label class="label">City</label>
+      </div>
+      <div class="button_div">
+        <button class="button" (click)="onSubmit()">
+          <span class="span">🔎</span>
+        </button>
+      </div>
+    </div>
+
+    <div class="card_div">
+      <div class="card">
+      <div id="map" style="width: 99%; height: 100vh;background-color: white;"></div>
+      </div>
+      <div class="card">
+        <div class="title">
+          <span>{{ visualArray[0] }}, {{ visualArray[1] }}</span>
+        </div>
+        <div class="weather_body">
+          <div class="first_col">
+            <ul class="first_icon_list">
+              <li>
+                <img
+                  [src]="getWeatherImgSource()"
+                  alt=""
+                  class="sunny_img"
+                />
+              </li>
+              <li>
+                <img
+                [src]="getTempImgSource()"
+                  alt=""
+                  class="sunny_img"
+                />
+              </li>
+              <li>
+                <img
+                  src="../../assets/Images/wind.png"
+                  alt=""
+                  class="sunny_img"
+                />
+              </li>
+            </ul>
+          </div>
+          <hr />
+          <div class="second_col">
+            <ul class="ul_list">
+              <li>
+                <span>{{ visualArray[4] }}</span>
+              </li>
+              <li>
+                <span>{{ visualArray[2] }}° C</span>
+              </li>
+              <li>
+                <span>{{ visualArray[3] }} m/s</span>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+
+    </div>
+    <div class="footer">
+      <app-footer></app-footer>
+    </div>
+  </div>
+ 
+
+</div>

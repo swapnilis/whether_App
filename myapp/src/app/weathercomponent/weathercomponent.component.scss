@@ -1,0 +1,212 @@
+
+.transparent-bg {
+    background-image: url('../../assets/Images/pexels-lumn-1028600.jpg');
+    background-size: cover;
+    background-position: center;
+    opacity: 0.5; /* Adjust the opacity as needed (0.0 to 1.0) */
+  }
+  .total_div{
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    top: 20px;
+  }
+
+  .card_div{
+    display: flex;
+    justify-content: space-around;
+    padding-top: 17px;
+  }
+  .search_div{
+    display: flex;
+    justify-content: center;
+    gap: 19px;
+  }
+  .container {
+    top: 10px;
+    left: 10px;
+    display: flex;
+    flex-direction: column;
+    gap: 7px;
+    position: relative;
+    color: white;
+    width: fit-content;
+  }
+  
+  .container .label {
+    font-size: 15px;
+    padding-left: 10px;
+    position: absolute;
+    top: 13px;
+    transition: 0.3s;
+    pointer-events: none;
+  }
+  
+  .input {
+    width: 200px;
+    height: 45px;
+    border: none;
+    outline: none;
+    padding: 0px 7px;
+    border-radius: 6px;
+    color: #fff;
+    font-size: 15px;
+    background-color: transparent;
+    box-shadow: 3px 3px 10px rgba(0,0,0,1),
+    -1px -1px 6px rgba(255, 255, 255, 0.4);
+  }
+  
+  .input:focus {
+    border: 2px solid transparent;
+    color: #fff;
+    box-shadow: 3px 3px 10px rgba(0,0,0,1),
+    -1px -1px 6px rgba(255, 255, 255, 0.4),
+    inset 3px 3px 10px rgba(0,0,0,1),
+    inset -1px -1px 6px rgba(255, 255, 255, 0.4);
+  }
+  
+  .container .input:valid ~ .label,
+  .container .input:focus ~ .label {
+    transition: 0.3s;
+    padding-left: 2px;
+    transform: translateY(-35px);
+  }
+  
+  .container .input:valid,
+  .container .input:focus {
+    box-shadow: 3px 3px 10px rgba(0,0,0,1),
+    -1px -1px 6px rgba(255, 255, 255, 0.4),
+    inset 3px 3px 10px rgba(0,0,0,1),
+    inset -1px -1px 6px rgba(255, 255, 255, 0.4);
+  }
+
+.button {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #e8e8e8;
+    background-color: #212121;
+    width: 70px;
+    height: 70px;
+    font-size: 24px;
+    text-transform: uppercase;
+    border: 2px solid #212121;
+    border-radius: 50%;
+    transition: all 0.6s cubic-bezier(0.23, 1, 0.320, 1);
+    box-shadow: 5px 5px 2px rgba(0, 0, 0, 0.15),
+      2px 2px 2px rgba(0, 0, 0, 0.1),
+      -3px -3px 2px rgba(255, 255, 255, 0.05),
+      -2px -2px 1px rgba(255, 255, 255, 0.05);
+    overflow: hidden;
+    cursor: pointer;
+  }
+  
+  .button .span {
+    position: relative;
+    z-index: 2;
+    transition: all 0.6s cubic-bezier(0.23, 1, 0.320, 1);
+  }
+  
+  .button::before {
+    content: "";
+    position: absolute;
+    background-color: #e8e8e8;
+    width: 150%;
+    height: 150%;
+    left: 0%;
+    bottom: 0%;
+    transform: translate(-100%, 100%) rotate(45deg);
+    border-radius: 15px;
+  }
+  
+  .button:hover::before {
+    animation: shakeBack 0.6s forwards 0.6s;
+  }
+  
+  .button:hover .span {
+    scale: 1.2;
+  }
+  
+  .button:hover {
+    box-shadow: none;
+  }
+  
+  .button:active {
+    scale: 0.95;
+  }
+  
+  @keyframes shakeBack {
+    0% {
+      transform: translate(-100%, 100%) rotate(45deg);
+    }
+  
+    50% {
+      transform: translate(15%, -15%) rotate(45deg);
+    }
+  
+    100% {
+      transform: translate(-10%, 10%) rotate(45deg);
+    }
+  }
+  
+   .card {
+    display: flex;
+    flex-direction: column;
+    width: 703px;
+    height: 466px;
+    border-radius: 30px;
+    background: #212121;
+    box-shadow: 15px 15px 30px rgb(25, 25, 25),
+                -15px -15px 30px rgb(60, 60, 60);
+   }
+   
+   .sunny_img{
+    height:105px;
+    width: 105px;
+   }
+
+   .weather_body{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+   }
+
+   .title{
+    display: flex;
+    height: 80px;
+    flex-direction: row;
+    justify-content: space-around;
+    margin-right: 23px;
+    top: 12px;
+    font-size: xx-large;
+    position: relative;
+    color: white;
+    font-family: cursive;
+   }
+
+   .first_icon_list li{
+    margin: 10px;
+   }
+
+   .second_col{
+    left: -29px;
+    position: relative;
+   }
+
+   .second_col li{
+    font-size: 1.6rem;
+    position: relative;
+    color: white;
+    margin: 10px;
+    padding-top: 84px;
+    font-family: sans-serif;
+   }
+
+   .ul_list{
+    margin-top: -38px;
+   }
+
+   .footer{
+    padding-top: 53px;
+   }
